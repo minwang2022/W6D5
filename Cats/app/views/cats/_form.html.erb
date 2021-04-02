@@ -13,8 +13,8 @@
     <label>Color
         <select name="cat[color]">
             <option disabled <%= cat.color ? "" : "selected" %> >-- Please select --</option>
-            <% Cat.COLOR.each do |color| %>
-                <option value="<%= color %>" <%= cat.color ? "" : "selected" %> ><%= color %></option>
+            <% Cat::COLORS.each do |color| %>
+                <option value="<%= color %>" <%= cat.color == color ? "selected" : "" %> ><%= color %></option>
             <% end %>
         </select>
     </label>
